@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# Contador App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 1. Datos del proyecto
+- **Nombre:** Contador App
+- **Autor:** Martín Oliver Pallarés
+- **Fecha:** Octubre 2025
+- **Expo SDK:** 51
+- **React Native:** 0.74
 
-## Get started
+## 2. Tecnología y justificación
+Elegí Expo porque hace todo mucho más fácil. No tuve que configurar Android Studio ni nada complicado, solo instalar Node y listo. Además el hot reload es súper rápido y puedo probar la app en mi móvil con solo escanear un QR. Como es mi primera app móvil, quería algo sencillo para empezar.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## 3. Configuración y ejecución
+Instalar:
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Luego escaneas el QR con Expo Go o presionas `a` para abrir el emulador de Android.
 
-## Learn more
+## 4. Estructura del proyecto
+```
+contador-app/
+  - App.js: aquí está todo el código de la app
+  - app.json: configuración de Expo
+  - package.json: dependencias
+  - assets/: iconos e imágenes
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+En `App.js` está la lógica del contador con useState y los tres botones. Todo bastante simple.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 5. Perfil de despliegue
+- **Android:** 14 (API 34)
+- **Probado en:** [tu dispositivo/emulador]
+- **Resolución:** 1080x2400
+- **Orientación:** vertical
 
-## Join the community
+## 6. Funcionamiento
+Es un contador básico con tres botones:
+- **Botón menos (-):** resta 1
+- **Reset:** vuelve a 0
+- **Botón más (+):** suma 1
 
-Join our community of developers creating universal apps.
+Cuando llegas a 10 sale un emoji de celebración. El número se muestra en grande en el centro con efecto de brillo azul.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<img width="387" height="864" alt="image" src="https://github.com/user-attachments/assets/d88b2fbb-5e37-4ef9-b2c3-2aa63f0346ce" />
+<img width="392" height="852" alt="image" src="https://github.com/user-attachments/assets/33a5eefa-86fe-4ed1-864a-4579076f72e0" />
+
+## 7. Conclusión
+Ha sido interesante aprender React Native. Lo más raro fue acostumbrarme a que los estilos no funcionan como CSS normal, y que en vez de divs y botones hay Views y TouchableOpacity. El emulador a veces va un poco lento pero funciona bien.
+
+**Limitaciones:**
+- El contador no se guarda si cierras la app
+- No tiene límite de números
+- Falta mejorar la accesibilidad
+
+Me quedé con ganas de añadir animaciones cuando cambias el número y tal vez guardar un historial, pero para una primera app móvil creo que está bien.
